@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+root 'welcome#index'
 Rails.application.routes.draw do
   # RESTful routes
   resources :examples, except: %i[new edit]
