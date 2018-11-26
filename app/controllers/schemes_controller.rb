@@ -15,11 +15,7 @@ class SchemesController < OpenReadController
 
   # POST /schemes
   def create
-<<<<<<< HEAD
-    @scheme = Scheme.new(scheme_params)
-=======
     @scheme = current_user.schemes.build(scheme_params)
->>>>>>> master
     # require 'pry'
     # binding.pry
 
