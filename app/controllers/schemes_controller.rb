@@ -1,5 +1,5 @@
 class SchemesController < OpenReadController
-  before_action :set_scheme, only: %i[show update destroy]
+  before_action :set_scheme, only: %i[update destroy]
 
   # GET /schemes
   def index
@@ -43,7 +43,7 @@ class SchemesController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_scheme
-    @scheme = Scheme.find(params[:id])
+    @scheme = current_user.schemes.find(params[:id])
   end
 
     # Only allow a trusted parameter "white list" through.
