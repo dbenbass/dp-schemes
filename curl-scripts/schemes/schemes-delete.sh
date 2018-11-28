@@ -1,1 +1,6 @@
-curl --include --request DELETE "http://localhost:4741/schemes/${ID}"
+curl "http://localhost:4741/schemes/${ID}" \
+--include \
+--request DELETE \
+--header "Authorization: Token token=${TOKEN}"
+
+echo
