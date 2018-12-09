@@ -10,6 +10,7 @@ class SchemesController < OpenReadController
 
   # GET /schemes/1
   def show
+    @scheme = Scheme.find(params[:id])
     render json: @scheme
   end
 
